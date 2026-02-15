@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Forest</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+    }
+
+    header {
+      padding: 20px;
+      background: #020617;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #38bdf8;
+    }
+
+    nav a {
+      margin-left: 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    .container {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 25px;
+      background: #38bdf8;
+      color: black;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #0ea5e9;
+    }
+
+    .signup-box {
+      max-width: 300px;
+      margin: 40px auto;
+      background: #020617;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: none;
+    }
+
+    footer {
+      background: #020617;
+      padding: 15px;
+      text-align: center;
+      font-size: 14px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Project Forest</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#download">Download</a>
+    <a href="https://discord.gg/6X6zqZK6" target="_blank" rel="noopener noreferrer">Discord</a>
+  </nav>
+</header>
+
+<section id="home" class="container">
+  <h2>Welcome</h2>
+  <p>Join our community and download exclusive VR content.</p>
+  <a class="btn" href="https://discord.gg/6X6zqZK6" target="_blank" rel="noopener noreferrer">Join Discord</a>
+</section>
+
+<section id="about" class="container">
+  <h2>About Project Forest</h2>
+  <p>
+    Project Forest is a VR Game that's a copy of a game called gorilla tag,
+    but instead you have long arms and tons of speed.
+  </p>
+</section>
+
+<section id="download" class="container">
+  <h2>Download</h2>
+  <p>VR HEADSET REQUIRED</p>
+  <a class="btn" href="ProjectForestV2.apk" onclick="return confirmDownload()">
+    Download (VR ONLY)
+  </a>
+</section>
+
+<section id="clans" class="container">
+  <h2>Clans</h2>
+  <a class="btn" href="https://discord.gg/PecvVwSq" target="_blank" rel="noopener noreferrer">JOIN TSO</a>
+  <a class="btn" href="https://discord.gg/XdJE7aaV" target="_blank" rel="noopener noreferrer">JOIN TTT</a>
+  <a class="btn" href="https://discord.gg/5YsvvKkc" target="_blank" rel="noopener noreferrer">JOIN TSM</a>
+</section>
+
+<section id="developers" class="container">
+  <h2>Development Team</h2>
+
+  <p><strong>Owner:</strong> LuckyVR</p>
+  <p><strong>2nd Owner:</strong> Lucid</p>
+  <p><strong>Developer:</strong> RJ, AK</p>
+  <p><strong>3rd Owner:</strong> TTTJR</p>
+  <p><strong>Co-Owner:</strong> Evan, BreadVR</p>
+  <p><strong>Trial Mod:</strong> itsjqk, whosjr</p>
+  <p><strong>Forest Guide:</strong> BoneVR, 11, MK1BART, TheVRGuy</p>
+</section>
+
+<section class="signup-box">
+  <h3>Sign Up</h3>
+  <input type="text" id="username" placeholder="Username" />
+  <input type="password" id="password" placeholder="Password" />
+  <button class="btn" onclick="signup()">Sign Up</button>
+  <p id="signupMsg"></p>
+</section>
+
+<section id="discord" class="container">
+  <h2>Discord Server</h2>
+  <p>Join our Discord community!</p>
+  <a class="btn" href="https://discord.gg/6X6zqZK6" target="_blank" rel="noopener noreferrer">
+    Open Discord
+  </a>
+</section>
+
+<footer>
+  © 2026 Project Forest. All rights reserved.
+</footer>
+
+<script>
+  function signup() {
+    const user = document.getElementById("username").value;
+    const pass = document.getElementById("password").value;
+    const msg = document.getElementById("signupMsg");
+
+    if (user && pass) {
+      msg.textContent = "Sign Up successful!";
+      msg.style.color = "#22c55e";
+    } else {
+      msg.textContent = "Please enter a username and password.";
+      msg.style.color = "#ef4444";
+    }
+  }
+
+  function confirmDownload() {
+    return confirm(
+      "WARNING: This file is not meant for PC. Only download this file if you are on a Virtual Reality Headset."
+    );
+  }
+</script>
+
+</body>
+</html>
